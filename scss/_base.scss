@@ -1,0 +1,9 @@
+@use "variable" as var;
+
+body{
+    color: var.$font;
+    font-family: "Roboto","游ゴシック", YuGothic,sans-serif;
+    *{
+        box-sizing: border-box;
+    }
+}
