@@ -290,7 +290,7 @@ main{
         max-width: 80%;
         margin: 0 auto 0 auto;
         position: static;
-        margin-top: 120px;
+        margin-top: 60px;
     }
     @include mix.mq(var.$sm){
         margin-top: 26px;
@@ -350,19 +350,22 @@ main{
         height: 130px;
         z-index: 1;
         @include mix.mq(var.$lg){
-            width: 16%;
-            height: auto;
-            top: -50px;
-            right: -20px;
+            // width: 16%;
+            // height: auto;
+            // top: -50px;
+            // right: -20px;
+            display: none;
         }
         @include mix.mq(var.$lg){
-            top: -40px;
+            // top: -40px;
+            display: none;
         }
     }
 }
 .w94{
     @include mix.mq(var.$sm){
         max-width: 94%;
+        margin: 0 auto;
     }
 }
 .logo{
@@ -654,7 +657,43 @@ main{
             font-size: 1.125rem;
         }
     }
+    &__mail{
+        background: #E5E5E5;
+        font-size: 1.25rem;
+        padding: 0.5em 1em;
+        width: 100%;
+        @include mix.mq(var.$lg){
+            font-size: 1.125rem;
+        }
+    }
 }
+.your_email{
+    display: none;
+}
+.your_email.open{
+    display: block;
+}
+.answer{
+    padding: 3px;
+}
+.answer.active{
+    animation: blinking 1s linear 0s infinite;
+}
+@keyframes blinking{
+    0%{
+        background: transparent;
+    }
+    50%{
+        background: transparent;
+    }
+    51%{
+        background: orange;
+    }
+    100%{
+        background: orange;
+    }
+}
+
 .submit{
     margin: 60px auto 0 auto;
     max-width: 100%;
@@ -1063,72 +1102,97 @@ main{
     @include mix.mq(var.$sm){
         padding: 20px 0 20px 0;
     }
-    &__headerArea{
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    &__headerImg{
-        display: inline-block;
-        max-width: 45%;
-        width: 100%;
-        @include mix.mq(var.$lg){
-            max-width: 80%;
-            width: 100%;
-        }
-    }
-    &__contentImg{
+    &__img{
         display: block;
+        margin: 0 auto;
         max-width: 80%;
         width: 100%;
-        margin: 0 auto;
+        object-fit: contain;
+        object-position: center;
+        @include mix.mq(var.$lg){
+            display: none;
+        }
+    }
+    &__imgSp{
+        display: none;
+        object-fit: contain;
+        object-position: center;
+        @include mix.mq(var.$lg){
+            display: block;
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+        }
         @include mix.mq(var.$sm){
             max-width: 94%;
         }
     }
-    &__list{
-        background: #B0D9FF;
-        padding: 40px 30px 30px 30px;
-        width: 100%;
-        justify-content: center;
-        margin: 0 auto;
-        border-radius: 7px;
-        @include mix.mq(var.$lg){
-            flex-direction: column;
-        }
-    }
-    &__item{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    &__hr{
-        transform: rotate(90deg);
-        border: dotted 1px #bdbdbd;
-        display: block;
-    }
-    &__text{
-        font-weight: bold;
-        font-size: 1.75rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    &__imgWrapper{
-        background: #fff;
-        width: 165px;
-        height: 165px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-    }
-    &__img{
-        object-fit: contain;
-        object-position: center;
-    }
-    &__lineImg{
-        height: 280px;
-        margin: 0 40px;
-    }
+    // &__headerArea{
+    //     text-align: center;
+    //     margin-bottom: 15px;
+    // }
+    // &__headerImg{
+    //     display: inline-block;
+    //     max-width: 45%;
+    //     width: 100%;
+    //     @include mix.mq(var.$lg){
+    //         max-width: 80%;
+    //         width: 100%;
+    //     }
+    // }
+    // &__contentImg{
+    //     display: block;
+    //     max-width: 80%;
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     @include mix.mq(var.$sm){
+    //         max-width: 94%;
+    //     }
+    // }
+    // &__list{
+    //     background: #B0D9FF;
+    //     padding: 40px 30px 30px 30px;
+    //     width: 100%;
+    //     justify-content: center;
+    //     margin: 0 auto;
+    //     border-radius: 7px;
+    //     @include mix.mq(var.$lg){
+    //         flex-direction: column;
+    //     }
+    // }
+    // &__item{
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+    // &__hr{
+    //     transform: rotate(90deg);
+    //     border: dotted 1px #bdbdbd;
+    //     display: block;
+    // }
+    // &__text{
+    //     font-weight: bold;
+    //     font-size: 1.75rem;
+    //     text-align: center;
+    //     margin-bottom: 20px;
+    // }
+    // &__imgWrapper{
+    //     background: #fff;
+    //     width: 165px;
+    //     height: 165px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     border-radius: 5px;
+    // }
+    // &__img{
+    //     object-fit: contain;
+    //     object-position: center;
+    // }
+    // &__lineImg{
+    //     height: 280px;
+    //     margin: 0 40px;
+    // }
 }
 .satisfaction{
     background: #fff;
@@ -1185,26 +1249,46 @@ main{
         border-radius: 7px;
         padding: 20px;
         align-items: center;
+        @include mix.mq(var.$sm){
+            flex-direction: column;
+        }
+    }
+    &__left{
+        max-width: 25%;
+        width: 100%;
+        margin-right: 40px;
     }
     &__img{
         display: block;
-        width: 130px;
+        width: 100%;
         height: auto;
         object-fit: contain;
         object-position: center;
-        margin: 0 20px 10px 0;
+        margin: 0 0 10px 0;
+        @include mix.mq(var.$lg){
+            width: 70%;
+            margin: 0 auto 10px auto;
+        }
         @include mix.mq(var.$sm){
             width: 100px;
+            margin: 0 auto 10px auto;
         }
     }
     &__name{
         text-align: center;
     }
+    &__right{
+        max-width: 70%;
+        width: 100%;
+        @include mix.mq(var.$lg){
+            max-width: 100%;
+        }
+    }
     &__heading{
         font-size: 1.25rem;
         font-weight: bold;
         line-height: 1.3em;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
     &__text{
         letter-spacing: 0.1em;
@@ -1378,7 +1462,6 @@ main{
         
     }
     &__img{
-        background: #5E5A5A;
         max-width: 30%;
         width: 100%;
         height: auto;
@@ -1389,6 +1472,12 @@ main{
             max-width: 36%;
             margin-left: 20px;
         }
+    }
+    &__img03{
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        padding: 40px 0;
     }
     &__numWrapper{
         position: absolute;
@@ -1457,6 +1546,9 @@ main{
             margin-left: 0;
             margin-top: 16px;
         }
+    }
+    &__link{
+        color: var.$font;
     }
     &__link:hover{
         opacity: 0.7;

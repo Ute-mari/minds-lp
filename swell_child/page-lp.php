@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>マネーの旅　｜　いつでも、どこでも、気軽に始められる資産形成の一歩</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dd37dd6080.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/style.css')); ?>">
+    <?php wp_head(); ?>
 </head>
 
 <body>
+    <?php wp_body_open(); ?>
     <header>
     </header>
     <main><!--テストコメント-->
@@ -33,8 +35,8 @@
                     <div class="hiroBtn__btnWrapper">
                         <a class="hiroBtn__btn" href="<?php get_home_url('/'); ?>#form">
                             <p>あなただけの資産運用診断スタート</p>
-                            <img class="hiroBtn__img" src="<?php echo esc_url(get_theme_file_uri('/img/free.png')); ?>" alt="診断無料">
                         </a>
+                        <img class="hiroBtn__img" src="<?php echo esc_url(get_theme_file_uri('/img/free.png')); ?>" alt="診断無料">
                     </div>
                 </div>
             </div>
@@ -93,16 +95,65 @@
                                     </div>
                                     <p class="form__text">あなたの年齢は？</p>
                                 </div>
-                                <p>
+                                <div class="answer active">
                                     <select name="entry.2139228333" class="form__select">
-                                        <option value="選択肢1"> 17歳以下</option>
-                                        <option value="選択肢2">18歳〜70歳</option>
-                                        <option value="選択肢3">71歳以上</option>
-                                        <!-- <option value="選択肢4">選択肢4</option>
-                                        <option value="選択肢5">選択肢5</option>
-                                        <option value="選択肢6">選択肢6</option> -->
+                                        <option value="">選択してください</option>
+                                        <option value="選択肢1">17歳以下</option>
+                                        <option value="選択肢2">18歳</option>
+                                        <option value="選択肢3">19歳</option>
+                                        <option value="選択肢4">20歳</option>
+                                        <option value="選択肢5">21歳</option>
+                                        <option value="選択肢6">22歳</option>
+                                        <option value="選択肢7">23歳</option>
+                                        <option value="選択肢8">24歳</option>
+                                        <option value="選択肢9">25歳</option>
+                                        <option value="選択肢10">26歳</option>
+                                        <option value="選択肢11">27歳</option>
+                                        <option value="選択肢12">28歳</option>
+                                        <option value="選択肢13">29歳</option>
+                                        <option value="選択肢14">30歳</option>
+                                        <option value="選択肢15">31歳</option>
+                                        <option value="選択肢16">32歳</option>
+                                        <option value="選択肢17">33歳</option>
+                                        <option value="選択肢18">34歳</option>
+                                        <option value="選択肢19">35歳</option>
+                                        <option value="選択肢20">36歳</option>
+                                        <option value="選択肢21">37歳</option>
+                                        <option value="選択肢22">38歳</option>
+                                        <option value="選択肢23">39歳</option>
+                                        <option value="選択肢24">40歳</option>
+                                        <option value="選択肢25">41歳</option>
+                                        <option value="選択肢26">42歳</option>
+                                        <option value="選択肢27">43歳</option>
+                                        <option value="選択肢28">44歳</option>
+                                        <option value="選択肢29">45歳</option>
+                                        <option value="選択肢30">46歳</option>
+                                        <option value="選択肢31">47歳</option>
+                                        <option value="選択肢32">48歳</option>
+                                        <option value="選択肢33">49歳</option>
+                                        <option value="選択肢34">50歳</option>
+                                        <option value="選択肢35">51歳</option>
+                                        <option value="選択肢36">52歳</option>
+                                        <option value="選択肢37">53歳</option>
+                                        <option value="選択肢38">54歳</option>
+                                        <option value="選択肢39">55歳</option>
+                                        <option value="選択肢40">56歳</option>
+                                        <option value="選択肢41">57歳</option>
+                                        <option value="選択肢42">58歳</option>
+                                        <option value="選択肢43">59歳</option>
+                                        <option value="選択肢44">60歳</option>
+                                        <option value="選択肢45">61歳</option>
+                                        <option value="選択肢46">62歳</option>
+                                        <option value="選択肢47">63歳</option>
+                                        <option value="選択肢48">64歳</option>
+                                        <option value="選択肢49">65歳</option>
+                                        <option value="選択肢50">66歳</option>
+                                        <option value="選択肢51">67歳</option>
+                                        <option value="選択肢52">68歳</option>
+                                        <option value="選択肢53">69歳</option>
+                                        <option value="選択肢54">70歳以上</option>
                                     </select>
-                                </p>
+                                </div>
                             </div>
                             <div class="form__content">
                                 <div class="form__textArea flex">
@@ -111,34 +162,56 @@
                                     </div>
                                     <p class="form__text">あなたの貯金は？</p>
                                 </div>
-                                <p>
+                                <div class="answer">
                                     <select name="entry.1196287957" class="form__select">
+                                        <option value="">選択してください</option>
                                         <option value="選択肢1"> 100万円以下</option>
-                                        <option value="選択肢2">選択肢2</option>
-                                        <option value="選択肢3">選択肢3</option>
-                                        <option value="選択肢4">選択肢4</option>
-                                        <option value="選択肢5">選択肢5</option>
-                                        <option value="選択肢6">選択肢6</option>
+                                        <option value="選択肢2">101万〜200万</option>
+                                        <option value="選択肢3">201万〜300万</option>
+                                        <option value="選択肢4">301万〜400万</option>
+                                        <option value="選択肢5">401万〜500万</option>
+                                        <option value="選択肢6">501万〜600万</option>
+                                        <option value="選択肢7">601万〜700万</option>
+                                        <option value="選択肢8">701万〜800万</option>
+                                        <option value="選択肢9">801万〜900万</option>
+                                        <option value="選択肢10">901万〜1000万</option>
+                                        <option value="選択肢11">1001万〜2000万</option>
+                                        <option value="選択肢12">2001万〜3000万</option>
+                                        <option value="選択肢13">3001万〜4000万</option>
+                                        <option value="選択肢14">4001万〜5000万</option>
+                                        <option value="選択肢15">5001万〜6000万</option>
+                                        <option value="選択肢16">6001万〜7000万</option>
+                                        <option value="選択肢17">7001万〜8000万</option>
+                                        <option value="選択肢18">8001万〜9000万</option>
+                                        <option value="選択肢19">9001万〜1億</option>
+                                        <option value="選択肢20">1億以上</option>
+
                                     </select>
-                                </p>
+                                </div>
                             </div>
                             <div class="form__content">
                                 <div class="form__textArea flex">
                                     <div class="form__numWrapper">
                                         <p class="form__num">3</p>
                                     </div>
-                                    <p class="form__text">あなたの貯金は？</p>
+                                    <p class="form__text">あなたの職業は？</p>
                                 </div>
-                                <p>
+                                <div class="answer">
                                     <select name="entry.1536994637" class="form__select">
+                                        <option value="">選択してください</option>
                                         <option value="選択肢1"> 会社員（上場企業）</option>
                                         <option value="選択肢2"> 会社員（非上場企業）</option>
                                         <option value="選択肢3"> 会社役員（上場企業）</option>
                                         <option value="選択肢4"> 会社役員（非上場企業）</option>
                                         <option value="選択肢5">自営業</option>
                                         <option value="選択肢6">公務員</option>
+                                        <option value="選択肢7">アルバイト・パート</option>
+                                        <option value="選択肢8">主婦</option>
+                                        <option value="選択肢9">フリーター</option>
+                                        <option value="選択肢10">年金受給者</option>
+                                        <option value="選択肢11">資産生活者</option>
                                     </select>
-                                </p>
+                                </div>
                             </div>
                             <div class="form__content">
                                 <div class="form__textArea flex">
@@ -147,34 +220,57 @@
                                     </div>
                                     <p class="form__text">あなたは5年後どうなりたい？</p>
                                 </div>
-                                <p>
+                                <div class="answer">
                                     <select name="entry.1156811175" class="form__select">
+                                        <option value="">選択してください</option>
                                         <option value="選択肢1"> 自宅を購入したい</option>
                                         <option value="選択肢2"> 現在の収入を50%増やしたい</option>
                                         <option value="選択肢3"> 子どもの教育資金を確保したい</option>
                                         <option value="選択肢4"> 独立してビジネスを始める</option>
                                         <option value="選択肢5">海外での生活資金を貯める</option>
                                         <option value="選択肢6"> 社会や環境に投資する</option>
+                                        <option value="選択肢7">老後資金を貯め始めたい</option>
+                                        <option value="選択肢8">資産を子どもに残す計画を立てる</option>
+                                        <option value="選択肢9">健康に時間も資金も投資する</option>
+                                        <option value="選択肢10">趣味やライフスタイルを充実させる</option>
                                     </select>
-                                </p>
+                                </div>
                             </div>
-                            <div class="form__content">
+                            <div class="form__content num5">
                                 <div class="form__textArea flex">
                                     <div class="form__numWrapper">
                                         <p class="form__num">5</p>
                                     </div>
                                     <p class="form__text">理想の老後生活は？</p>
                                 </div>
-                                <p>
+                                <div class="answer">
                                     <select name="entry.175969250" class="form__select">
+                                        <option value="">選択してください</option>
                                         <option value="選択肢1"> 自由に世界を旅する</option>
                                         <option value="選択肢2"> 夢の家に住む</option>
                                         <option value="選択肢3"> 好きなことで生計をたてる</option>
                                         <option value="選択肢4"> ボランティアや社会貢献</option>
                                         <option value="選択肢5"> 学び続ける生活</option>
                                         <option value="選択肢6"> 芸術や文化活動に没頭する</option>
+                                        <option value="選択肢7">家族や友人との豊かな時間</option>
+                                        <option value="選択肢8">完全な健康と活力</option>
+                                        <option value="選択肢9">ストレスゼロの経済的な自由を得る</option>
+                                        <option value="選択肢10">今と変わらない生活ができればいい</option>
                                     </select>
-                                </p>
+                                </div>
+                            </div>
+                            <div class="form__content your_email">
+                                <label for="email">
+                                    <div class="form__textArea flex">
+                                        <div class="form__numWrapper">
+                                            <p class="form__num">6</p>
+                                        </div>
+                                        <p class="form__text">メールアドレス</p>
+                                    </div>
+                                </label>
+                                <div>
+                                    <input class="form__mail" type="email" id="email" required>
+                                </div>
                             </div>
                             <div class="submit">
                                 <div class="submit__textWrapper">
@@ -346,7 +442,7 @@
                 <div class="sectionBtn__textWrapper">
                     <img class="submit__microCopy" src="<?php echo esc_url(get_theme_file_uri('/img/micro_copy.png')); ?>" alt="知識ゼロの投資初心者でも安心">
                 </div>
-                <div class="sectionBtn__btnWrapper">
+                <div class="sectionBtn__btnWrapper w94">
                     <a class="sectionBtn__btn" href="<?php get_home_url('/'); ?>#form">
                         <p>あなただけの資産運用診断スタート</p>
                     </a>
@@ -356,12 +452,14 @@
         </section>
         <section class="three">
             <div>
-                <h2 class="three__headerArea">
+                <img class="three__img" src="<?php echo esc_url(get_theme_file_uri('/img/three_content.jpg')); ?>" alt="診断累計3,384人">
+                <img class="three__imgSp" src="<?php echo esc_url(get_theme_file_uri('/img/three_contentSp.jpg')); ?>" alt="診断累計3,384人">
+                <!-- <h2 class="three__headerArea">
                     <img class="three__headerImg" src="<?php echo esc_url(get_theme_file_uri('/img/three_header.png')); ?>" alt="マネジェネが選ばれる３つの理由">
                 </h2>
                 <div class="three__contentWrapper">
                     <img class="three__contentImg" src="<?php echo esc_url(get_theme_file_uri('/img/three_img.png')); ?>" alt="3つの理由">
-                </div>
+                </div> -->
                 <!-- <ul class="three__list flex">
                     <li class="three__item">
                         <p class="three__text">お金の不安なら<br>なんでもOK</p>
@@ -504,7 +602,7 @@
                     <div class="flow__textArea">
                         <p>入力していただいたメールアドレス宛に診断結果をお送りいたします！</p>
                     </div>
-                    <img class="flow__img" src="<?php echo esc_url(get_theme_file_uri('/img/.jpg')); ?>" alt="">
+                    <img class="flow__img" src="<?php echo esc_url(get_theme_file_uri('/img/flow02.jpg')); ?>" alt="">
                     <div class="flow__numWrapper flex">
                         <p class="flow__numText">step</p>
                         <p class="flow__num">2</p>
@@ -515,10 +613,9 @@
                 </div>
                 <div class="flow__step flex">
                     <div class="flow__textArea">
-                        <p>分からないところや、詳しく知りたいときは公式LINEより無料相談！</p>
-                        <p>IFA（国が認めた専門家）が一人ひとりに寄り添って資産運用方法をご説明します。</p>
+                        <p>具体的な投資額などを決定。<br>資産運用を開始してみよう。</p>
                     </div>
-                    <img class="flow__img" src="<?php echo esc_url(get_theme_file_uri('/img/.jpg')); ?>" alt="">
+                    <img class="flow__img flow__img03" src="<?php echo esc_url(get_theme_file_uri('/img/flow03.png')); ?>" alt="">
                     <div class="flow__numWrapper flex">
                         <p class="flow__numText">step</p>
                         <p class="flow__num">3</p>
@@ -529,7 +626,7 @@
                 <div class="sectionBtn__textWrapper">
                     <img class="submit__microCopy" src="<?php echo esc_url(get_theme_file_uri('/img/micro_copy.png')); ?>" alt="知識ゼロの投資初心者でも安心">
                 </div>
-                <div class="sectionBtn__btnWrapper">
+                <div class="sectionBtn__btnWrapper w94">
                     <a class="sectionBtn__btn" href="<?php get_home_url('/'); ?>#form">
                         <p>あなただけの資産運用診断スタート</p>
                     </a>
@@ -558,6 +655,8 @@
             <p class="footer__copy">&copy;2024　有限会社マインズプランニング</p>
         </div>
     </footer>
+    <script src="<?php echo esc_url(get_theme_file_uri('/js/script.js')); ?>"></script>
+    <?php wp_footer(); ?>
 </body>
 
 </html>
